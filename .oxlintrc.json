@@ -1,0 +1,13 @@
+{
+  "plugins": ["typescript", "unicorn", "oxc", "promise"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "error"
+  },
+  "rules": {
+    "no-shadow": "error",
+    "promise/no-multiple-resolved": "error",
+    "typescript/no-explicit-any": "error"
+  }
+}

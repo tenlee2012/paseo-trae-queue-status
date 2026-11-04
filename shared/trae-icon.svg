@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Mark geometry from https://www.trae.cn/ (icon-logo SVG), retrieved 2026-10-26.
+       Keep the mark at 90% of the tile width so it remains legible in provider lists. -->
+  <path
+    transform="translate(4 13.75) scale(1.5)"
+    fill="currentColor"
+    d="M48 34.642H6.857v-6.854H0V.358h48zM6.857 27.788h34.286V7.215H6.857zm17.145-10.391-4.849 4.848-4.848-4.848 4.848-4.848zm13.713-.003-4.848 4.848-4.848-4.848 4.848-4.848z"
+  />
+</svg>

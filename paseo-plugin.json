@@ -1,0 +1,10 @@
+{
+  "id": "trae-queue-status",
+  "name": "TRAE queue status",
+  "description": "Runs TRAE CLI through ACP with queue updates, per-turn token usage, and steering.",
+  "media": ["assets/queue-status-preview.png"],
+  "requirements": {
+    "paseo": ">=0.13.0"
+  },
+  "build": [["npm", "ci", "--omit=dev", "--ignore-scripts", "--legacy-peer-deps"]]
+}

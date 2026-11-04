@@ -1,0 +1,161 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "method": "session/update",
+    "params": {
+      "sessionId": "native-1",
+      "update": {
+        "sessionUpdate": "tool_call",
+        "toolCallId": "spawn-fixture",
+        "title": "Spawn Review fixture",
+        "kind": "think",
+        "status": "in_progress",
+        "content": [
+          {
+            "type": "content",
+            "content": {
+              "type": "text",
+              "text": "Action: spawn_agent\n\nThread: child-1\n\nModel: fixture\n\nReasoning: Medium\n\nBackground: true\n\nPrompt:\nReturn fixture done"
+            }
+          }
+        ],
+        "rawInput": {
+          "prompt": "Return fixture done",
+          "senderThreadId": "native-1",
+          "receiverThreadIds": ["child-1"],
+          "agentsStates": {},
+          "model": "fixture",
+          "reasoningEffort": "medium",
+          "runInBackground": true
+        },
+        "_meta": {
+          "traex": {
+            "type": "subagent_control",
+            "action": "spawn_agent",
+            "toolCallId": "spawn-fixture",
+            "senderThreadId": "native-1",
+            "parentThreadId": "native-1",
+            "parentToolCallId": "spawn-fixture",
+            "parentControlKind": "spawn_agent",
+            "agentThreadId": "child-1",
+            "childThreadId": "child-1",
+            "agentNickname": "Review fixture"
+          }
+        }
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "method": "session/update",
+    "params": {
+      "sessionId": "native-1",
+      "update": {
+        "sessionUpdate": "tool_call_update",
+        "toolCallId": "spawn-fixture",
+        "status": "completed",
+        "title": "Spawn Review fixture",
+        "content": [
+          {
+            "type": "content",
+            "content": {
+              "type": "text",
+              "text": "Action: spawn_agent\n\nThread: child-1\n\nModel: fixture\n\nReasoning: Medium\n\nBackground: true\n\nPrompt:\nReturn fixture done"
+            }
+          }
+        ],
+        "rawInput": {
+          "prompt": "Return fixture done",
+          "senderThreadId": "native-1",
+          "receiverThreadIds": ["child-1"],
+          "agentsStates": {
+            "child-1": {
+              "status": "pendingInit",
+              "message": null
+            }
+          },
+          "model": "fixture",
+          "reasoningEffort": "medium",
+          "runInBackground": true
+        },
+        "_meta": {
+          "traex": {
+            "type": "subagent_control",
+            "action": "spawn_agent",
+            "toolCallId": "spawn-fixture",
+            "senderThreadId": "native-1",
+            "parentThreadId": "native-1",
+            "parentToolCallId": "spawn-fixture",
+            "parentControlKind": "spawn_agent",
+            "agentThreadId": "child-1",
+            "childThreadId": "child-1",
+            "agentNickname": "Review fixture",
+            "agentStatuses": [
+              {
+                "threadId": "child-1",
+                "agentNickname": "Review fixture",
+                "status": "pending_init"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "method": "session/update",
+    "params": {
+      "sessionId": "native-1",
+      "update": {
+        "sessionUpdate": "agent_message_chunk",
+        "content": {
+          "type": "text",
+          "text": "fixture done"
+        },
+        "messageId": "m3"
+      },
+      "_meta": {
+        "parentToolCallId": "spawn-fixture",
+        "traex": {
+          "type": "subagent_child",
+          "parentThreadId": "native-1",
+          "childThreadId": "child-1",
+          "parentToolCallId": "spawn-fixture",
+          "parentControlKind": "spawn_agent",
+          "childTurnId": "child-turn-1"
+        }
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "method": "session/update",
+    "params": {
+      "sessionId": "native-1",
+      "update": {
+        "sessionUpdate": "tool_call",
+        "toolCallId": "subagent:child-1:lifecycle:child-turn-1",
+        "title": "Background subagent",
+        "kind": "think",
+        "status": "completed",
+        "rawOutput": {
+          "type": "subagent_completion",
+          "status": "completed",
+          "turnId": "child-turn-1"
+        }
+      },
+      "_meta": {
+        "parentToolCallId": "spawn-fixture",
+        "traex": {
+          "type": "subagent_child",
+          "parentThreadId": "native-1",
+          "childThreadId": "child-1",
+          "parentToolCallId": "spawn-fixture",
+          "parentControlKind": "spawn_agent",
+          "childTurnId": "child-turn-1"
+        }
+      }
+    }
+  }
+]

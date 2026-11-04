@@ -1,0 +1,54 @@
+{
+  "name": "paseo-trae-queue-status",
+  "version": "0.5.3",
+  "private": true,
+  "description": "Paseo provider plugin for TRAE CLI queue status, per-turn token usage, and steering.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tenlee2012/paseo-trae-queue-status.git"
+  },
+  "files": [
+    "paseo-plugin.json",
+    "OVERVIEW.md",
+    "README.md",
+    "README.en.md",
+    "index.client.tsx",
+    "index.server.ts",
+    "client/",
+    "server/",
+    "shared/",
+    "assets/",
+    "LICENSE"
+  ],
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt --check .",
+    "format:write": "oxfmt .",
+    "lint": "oxlint --deny-warnings",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@getpaseo/client": "0.13.0"
+  },
+  "devDependencies": {
+    "@getpaseo/plugin": "0.13.0",
+    "@getpaseo/protocol": "0.13.0",
+    "@tanstack/react-query": "5.90.16",
+    "@types/node": "^20.19.0",
+    "@types/react": "~19.2.0",
+    "@types/react-test-renderer": "19.1.0",
+    "oxfmt": "0.46.0",
+    "oxlint": "1.61.0",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-test-renderer": "19.1.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.6",
+    "zod": "^4.4.3"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
